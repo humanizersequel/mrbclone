@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="js" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="">
+  <title>The Mars Review of Books</title>
+  <meta property="og:site_name" content="The Mars Review of Books">
+  <meta property="og:url" content="https://marsreview.org/">
+  <meta property="og:title" content="The Mars Review of Books">
+  <meta property="og:type" content="website">
+  <meta property="og:description"
+    content="Mars Review of Books is an independent publication showcasing writing talent from independent authors throughout the year, either writing about books or their own content of choosing.  It is simultaneously published in print, in Urbit, and on the legacy web.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Landing">
+  <meta name="twitter:description"
+    content="Mars Review of Books is an independent publication showcasing writing talent from independent authors throughout the year, either writing about books or their own content of choosing.  It is simultaneously published in print, in Urbit, and on the legacy web.">
+  <meta name="facebook-domain-verification" content="00fb0b3xo8rrkidavcr4se0np3hlne">
+  <style>
+    :root {
+      --font-body-family: Assistant, sans-serif;
+      --font-body-style: normal;
+      --font-body-weight: 400;
+      --font-body-weight-bold: 700;
+
+      --font-heading-family: Garamond, Baskerville, Caslon, serif;
+      --font-heading-style: normal;
+      --font-heading-weight: 400;
+
+      --font-body-scale: 1.0;
+      --font-heading-scale: 1.0;
+
+      --color-base-text: 18, 18, 18;
+      --color-shadow: 18, 18, 18;
+      --color-base-background-1: 255, 255, 255;
+      --color-base-background-2: 243, 243, 243;
+      --color-base-solid-button-labels: 255, 255, 255;
+      --color-base-outline-button-labels: 18, 18, 18;
+      --color-base-accent-1: 18, 18, 18;
+      --color-base-accent-2: 51, 79, 180;
+      --payment-terms-background-color: #ffffff;
+
+      --gradient-base-background-1: #ffffff;
+      --gradient-base-background-2: #f3f3f3;
+      --gradient-base-accent-1: #121212;
+      --gradient-base-accent-2: #334fb4;
+
+      --media-padding: px;
+      --media-border-opacity: 0.05;
+      --media-border-width: 1px;
+      --media-radius: 0px;
+      --media-shadow-opacity: 0.0;
+      --media-shadow-horizontal-offset: 0px;
+      --media-shadow-vertical-offset: 4px;
+      --media-shadow-blur-radius: 5px;
+
+      --page-width: 120rem;
+      --page-width-margin: 0rem;
+
+      --card-image-padding: 0.0rem;
+      --card-corner-radius: 0.0rem;
+      --card-text-alignment: left;
+      --card-border-width: 0.0rem;
+      --card-border-opacity: 0.1;
+      --card-shadow-opacity: 0.0;
+      --card-shadow-horizontal-offset: 0.0rem;
+      --card-shadow-vertical-offset: 0.4rem;
+      --card-shadow-blur-radius: 0.5rem;
+
+      --badge-corner-radius: 4.0rem;
+
+      --popup-border-width: 1px;
+      --popup-border-opacity: 0.1;
+      --popup-corner-radius: 0px;
+      --popup-shadow-opacity: 0.0;
+      --popup-shadow-horizontal-offset: 0px;
+      --popup-shadow-vertical-offset: 4px;
+      --popup-shadow-blur-radius: 5px;
+
+      --drawer-border-width: 1px;
+      --drawer-border-opacity: 0.1;
+      --drawer-shadow-opacity: 0.0;
+      --drawer-shadow-horizontal-offset: 0px;
+      --drawer-shadow-vertical-offset: 4px;
+      --drawer-shadow-blur-radius: 5px;
+
+      --spacing-sections-desktop: 0px;
+      --spacing-sections-mobile: 0px;
+
+      --grid-desktop-vertical-spacing: 8px;
+      --grid-desktop-horizontal-spacing: 8px;
+      --grid-mobile-vertical-spacing: 4px;
+      --grid-mobile-horizontal-spacing: 4px;
+
+      --text-boxes-border-opacity: 0.1;
+      --text-boxes-border-width: 0px;
+      --text-boxes-radius: 0px;
+      --text-boxes-shadow-opacity: 0.0;
+      --text-boxes-shadow-horizontal-offset: 0px;
+      --text-boxes-shadow-vertical-offset: 4px;
+      --text-boxes-shadow-blur-radius: 5px;
+
+      --buttons-radius: 0px;
+      --buttons-radius-outset: 0px;
+      --buttons-border-width: 1px;
+      --buttons-border-opacity: 1.0;
+      --buttons-shadow-opacity: 0.0;
+      --buttons-shadow-horizontal-offset: 0px;
+      --buttons-shadow-vertical-offset: 4px;
+      --buttons-shadow-blur-radius: 5px;
+      --buttons-border-offset: 0px;
+
+      --inputs-radius: 0px;
+      --inputs-border-width: 1px;
+      --inputs-border-opacity: 0.55;
+      --inputs-shadow-opacity: 0.0;
+      --inputs-shadow-horizontal-offset: 0px;
+      --inputs-margin-offset: 0px;
+      --inputs-shadow-vertical-offset: 4px;
+      --inputs-shadow-blur-radius: 5px;
+      --inputs-radius-outset: 0px;
+
+      --variant-pills-radius: 40px;
+      --variant-pills-border-width: 1px;
+      --variant-pills-border-opacity: 0.55;
+      --variant-pills-shadow-opacity: 0.0;
+      --variant-pills-shadow-horizontal-offset: 0px;
+      --variant-pills-shadow-vertical-offset: 4px;
+      --variant-pills-shadow-blur-radius: 5px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: calc(var(--font-body-scale) * 62.5%);
+      height: 100%;
+    }
+
+    body {
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: 100%;
+      min-height: 100%;
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: 0.06rem;
+      line-height: calc(1 + 0.8 / var(--font-body-scale));
+      font-family: var(--font-body-family);
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    @media screen and (min-width: 750px) {
+      body {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+
+  <link href="./assets/base.css" rel="stylesheet" type="text/css" media="all">
+  <link
+    href="https://planet.one/planet-picker-external.css"
+    rel="stylesheet"
+    type="text/css"
+    media="all"
+  >
+</head>
+
+<body class="gradient __plain_text_READY__">
+  <div class="container">
+    <div class="mars-section">
+      <link href="./assets/main.css" rel="stylesheet" type="text/css" media="all">
+      <link rel="stylesheet" href="./assets/auxiliary.css">
+      <style></style>
+      <div style="opacity:0" class="hHzYuJ __mars __mars_6x_QSubD" id="__mars">
+        <div class="cCHonK">
+          <div class="bpQaoh">
+            <div style="--overlay:rgba(0, 0, 0, 0.4)" class="kFoSDU mars-3_">
+              <div>
+                <div class="mars-r mars-r-eh" style="--s-xs:0px">
+                  <div class="mars-c" style="--c-xs:12;--c-md:12;--c-lg:12">
+                    <div class="dIjtdz mars-5_">
+                      <div class="mars-6_ mars-r mars-r-eh" style="--s-xs:15px;--s-md:0px;--s-lg:15px">
+                        <div class="mars-c" style="--c-xs:12;--c-md:12;--c-lg:12">
+                          <div class="dIjtdz mars-7_">
+                            <h1 class="kOzfyS mars-8_"><span class="hKEAti">The Mars Review&nbsp;</span></h1>
+                            <h1 class="kOzfyS mars-11_"><span class="hKEAti">of Books</span></h1>
+                            <p class="jgBUGG mars-14_ mars-gs-paragraph-1"><span class="hKEAti">A magazine in print
+                                and on
+                                Urbit</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sc-iJKOTD mars-27_ mars-r mars-r-eh" style="--s-xs:5px">
+                  <div class="mars-c sc-eGPXGI dIjtdz mars-28_" style="--c-xs:12;--c-sm:6;--c-md:3;--c-lg:3">
+                    <a data-link="inherit" class="expansive sc-fmciRz hKEAti"
+                       href="https://www.marsreview.org/issue2/" target="_self">
+                      <h3 class="sc-iAKWXU kOzfyS mars-29_">
+                        <p>Digital Edition</p>
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="mars-c sc-eGPXGI dIjtdz mars-131_" style="--c-xs:12;--c-sm:6;--c-md:3;--c-lg:3">
+                    <a data-link="inherit" class="expansive sc-fmciRz hKEAti mars-129_"
+                      href="https://store.marsreview.org/" target="_self">
+                      <h3 class="sc-iAKWXU kOzfyS mars-130_">
+                        <p>Print Edition</p>
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="mars-c sc-eGPXGI dIjtdz mars-36_" style="--c-xs:12;--c-sm:6;--c-md:3;--c-lg:3">
+                    <a data-link="inherit" class="expansive sc-fmciRz hKEAti"
+                      href="https://www.marsreview.org/vol1/issue1/" target="_self">
+                      <h3 class="sc-iAKWXU kOzfyS mars-37_">
+                        <p>Digital Archive</p>
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="mars-c sc-eGPXGI dIjtdz mars-32_" style="--c-xs:12;--c-sm:6;--c-md:3;--c-lg:3">
+                    <a data-link="inherit" class="expansive sc-fmciRz hKEAti"
+                      href="https://store.marsreview.org/products/buy-an-urbit-planet" target="_self">
+                      <h3 class="sc-iAKWXU kOzfyS mars-33_">
+                        <p>Buy an Urbit Planet (Self-Hosted)</p>
+                      </h3>
+                    </a>
+                  </div>
+                </div>
+                <section style="padding-block:2rem; display:flex; flex-direction:column; align-items:center; font-family:var(--mars-primary-font); color:var(--mars-color-8);">
+                  <div style="padding-inline:1rem;">
+                    <h2 style="color:var(--mars-color-8);">
+                      NEW: Buy a <i>Mars Review</i> Subscription + Urbit Planet + Hosting Plan
+                    </h2>
+                    <p>$18 per month ($15 per month for planet hosting, $3 per month for print MRB subscription) includes:</p>
+                    <ul>
+                      <li>
+                        Permanent Urbit ID with simple and secure access to the
+                        network
+                      </li>
+                      <li>
+                        Custom <em>Mars Review of Books</em> desktop
+                      </li>
+                      <li>
+                        Subscription to the <em>Mars Review of Books</em> print
+                        edition at over 50% off cover price
+                      </li>
+                      <li>
+                        Access to Urbit-only <em>Mars Review</em> content and
+                        chat on the illustrious ~bidbel star
+                      </li>
+                    </ul>
+                  </div>
+                  <iframe src="https://planet.one/embed/mars-review?accentColor=%236D0718&bgColor=%23111213">
+                  </iframe>
+                </section>
+                <div class="sc-iJKOTD mars-118_ mars-r" style="--s-xs:15px">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="./assets/two.css" media="all">
+</body>
+
+</html>
