@@ -1,0 +1,191 @@
+.dIjtdz,
+.dYuGJX,
+.kFoSDU {
+  position: relative
+}
+.dYuGJX img {
+  height: 100%;
+  width: 100%
+}
+.kGlKbA {
+  width: 100%
+}
+.hHzYuJ {
+  --mars-sample-color: #5d6b82;
+  --mars-border-color: #d1d5db;
+  opacity: 1!important
+}
+.kFoSDU {
+  padding: 20px 0
+}
+.jgBUGG > span:last-child {
+  line-height: inherit;
+  display: block;
+  margin-right: 0!important
+}
+@media all {
+  .__mars_6x_QSubD .mars-3_ {
+    padding-bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding-top: 0;
+    background-image: none;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    opacity: 1;
+    margin-bottom: 7px;
+    background-color: var(--mars-color-5)
+  }
+  .__mars_6x_QSubD .mars-5_ {
+    padding-bottom: 0
+  }
+  .__mars_6x_QSubD .mars-6_ {
+    background-image: initial;
+    background-position: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: var(--mars-color-5);
+    margin-right: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-left: 0;
+    margin-bottom: 50px
+  }
+  .__mars_6x_QSubD .mars-43_,
+  .__mars_6x_QSubD .mars-7_ {
+    text-align: center;
+    padding-left: 250px;
+    padding-right: 250px
+  }
+  .__mars_6x_QSubD .mars-8_ {
+    font-size: 76px;
+    color: var(--mars-color-8);
+    font-family: var(--mars-primary-font);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700
+  }
+  .__mars_6x_QSubD .mars-11_ {
+    font-size: 32px!important;
+    font-family: "EB Garamond"!important;
+    color: var(--mars-color-8)!important;
+    font-weight: 700!important;
+    margin-top: 0!important;
+    margin-bottom: 12px!important
+  }
+  .__mars_6x_QSubD .mars-14_ {
+    color: #fff;
+    font-family: "EB Garamond";
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-style: italic
+  }
+  .__mars_6x_QSubD .mars-29_,
+  .__mars_6x_QSubD .mars-33_,
+  .__mars_6x_QSubD .mars-37_ {
+    font-family: "EB Garamond";
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-top: 0;
+    opacity: 1
+  }
+  .__mars_6x_QSubD .mars-27_ {
+    text-align: center
+  }
+  .__mars_6x_QSubD .mars-28_ {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background: #be1b29;
+    color: #fff;
+    border: 1px solid #000
+  }
+  .__mars_6x_QSubD .mars-29_ {
+    color: var(--mars-color-5);
+    margin-bottom: 10px;
+    display: block
+  }
+  .__mars_6x_QSubD .mars-131_,
+  .__mars_6x_QSubD .mars-32_ {
+    padding-top: 40px;
+    padding-bottom: 15px;
+    background: #191919;
+    border: 1px solid #000;
+    display: block
+  }
+  .__mars_6x_QSubD .mars-33_,
+  .__mars_6x_QSubD .mars-37_ {
+    color: #be1b29;
+    margin-bottom: 10px
+  }
+  .__mars_6x_QSubD .mars-36_ {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-image: initial;
+    background-position: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: var(--mars-color-8);
+    display: block;
+    border: 1px solid #000
+  }
+  .__mars_6x_QSubD .mars-118_ {
+    display: flex;
+    flex: 1 1 auto;
+    opacity: 1
+  }
+  .__mars_6x_QSubD .mars-130_ {
+    font-family: "EB Garamond";
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--mars-color-8);
+    line-height: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    opacity: 1
+  }
+}
+@media (min-width:1025px) and (max-width:1199px) {
+  .__mars_6x_QSubD .mars-19_,
+  .__mars_6x_QSubD .mars-19_ > img,
+  .__mars_6x_QSubD .rid-12,
+  .__mars_6x_QSubD .rid-12 > img {
+    height: auto
+  }
+}
+@media (min-width:768px) and (max-width:1024px) {
+  .__mars_6x_QSubD .mars-108_,
+  .__mars_6x_QSubD .mars-43_,
+  .__mars_6x_QSubD .mars-7_ {
+    padding-left: 100px;
+    padding-right: 100px
+  }
+  .__mars_6x_QSubD .mars-19_,
+  .__mars_6x_QSubD .mars-19_ > img,
+  .__mars_6x_QSubD .rid-12,
+  .__mars_6x_QSubD .rid-12 > img {
+    height: auto
+  }
+  .__mars_6x_QSubD .mars-20_ {
+    padding-top: 32px
+  }
+}
+@media (max-width:767px) {
+  .__mars_6x_QSubD .mars-108_,
+  .__mars_6x_QSubD .mars-41_,
+  .__mars_6x_QSubD .mars-43_,
+  .__mars_6x_QSubD .mars-7_ {
+    padding-right: 0;
+    padding-left: 0
+  }
+}
