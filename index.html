@@ -1,24 +1,58 @@
 <!DOCTYPE html>
 <html class="js" lang="en">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="">
-  <title>The Mars Review of Books</title>
-  <meta property="og:site_name" content="The Mars Review of Books">
-  <meta property="og:url" content="https://marsreview.org/">
-  <meta property="og:title" content="The Mars Review of Books">
-  <meta property="og:type" content="website">
-  <meta property="og:description"
-    content="Mars Review of Books is an independent publication showcasing writing talent from independent authors throughout the year, either writing about books or their own content of choosing.  It is simultaneously published in print, in Urbit, and on the legacy web.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Landing">
-  <meta name="twitter:description"
-    content="Mars Review of Books is an independent publication showcasing writing talent from independent authors throughout the year, either writing about books or their own content of choosing.  It is simultaneously published in print, in Urbit, and on the legacy web.">
-  <meta name="facebook-domain-verification" content="00fb0b3xo8rrkidavcr4se0np3hlne">
-  <style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="">
+<title>The Mars Review of Books</title>
+<meta property="og:site_name" content="The Mars Review of Books">
+<meta property="og:url" content="https://marsreview.org/">
+<meta property="og:title" content="The Mars Review of Books">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Mars Review of Books is an independent publication showcasing writing talent from independent authors throughout the year, either writing about books or their own content of choosing.  It is simultaneously published in print, in Urbit, and on the legacy web.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Landing">
+<meta name="twitter:description" content="Mars Review of Books is an independent publication showcasing writing talent from independent authors throughout the year, either writing about books or their own content of choosing.  It is simultaneously published in print, in Urbit, and on the legacy web.">
+<meta name="facebook-domain-verification" content="00fb0b3xo8rrkidavcr4se0np3hlne">
+  <script>
+function setCookie(name, ship,email,token,days) {
+      var expires = "";
+      if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+      document.cookie = name + ship+ "=" + email + '|' + token  + expires + "; path=/";
+}
+
+window.addEventListener("message", e => {
+  if (!e.data.token) {
+//    console.log("Spurious window.postMessage", e);
+    return;
+  } else {
+    console.log('postMessage', e.data.token);
+    setCookie('studio-auth-', e.data.ship, e.data.email, e.data.token);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  const styleVars = ["--background-body", "--text-bright", "--text-main", "--links"];
+  const [bg, textBright, textMain, links] = styleVars.map((style) => {
+    return encodeURIComponent(getComputedStyle(document.documentElement).getPropertyValue(style).substring(1))
+  });
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const login = urlParams.get('login');
+  const tier = urlParams.get('tier');
+  const email = urlParams.get('email');
+
+
+  const frame = document.querySelector("iframe");
+  frame.src = frame.src + "?" + `background=${bg}&textBright=${textBright}&textMain=${textMain}&links=${links}&path=${window.location.pathname}&login=${login}&email=${email}&tier=${tier}`
+});
+  </script>
+<style>
     :root {
       --font-body-family: Assistant, sans-serif;
       --font-body-style: normal;
@@ -163,131 +197,139 @@
       }
     }
   </style>
-
-  <link href="./assets/base.css" rel="stylesheet" type="text/css" media="all">
-  <link
-    href="https://planet.one/planet-picker-external.css"
-    rel="stylesheet"
-    type="text/css"
-    media="all"
-  >
+<link href="./assets/base.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://planet.one/planet-picker-external.css" rel="stylesheet" type="text/css" media="all">
 </head>
-
 <body class="gradient __plain_text_READY__">
-  <div class="container">
-    <div class="mars-section">
-      <link href="./assets/main.css" rel="stylesheet" type="text/css" media="all">
-      <link rel="stylesheet" href="./assets/auxiliary.css">
-      <style></style>
-      <div style="opacity:0" class="hHzYuJ __mars __mars_6x_QSubD" id="__mars">
-        <div class="cCHonK">
-          <div class="bpQaoh">
-            <div style="--overlay:rgba(0, 0, 0, 0.4)" class="kFoSDU mars-3_">
-              <div>
-                <div class="mars-r mars-r-eh" style="--s-xs:0px">
-                  <div class="mars-c" style="--c-xs:12;--c-md:12;--c-lg:12">
-                    <div class="dIjtdz mars-5_">
-                      <div class="mars-6_ mars-r mars-r-eh" style="--s-xs:15px;--s-md:0px;--s-lg:15px">
-                        <div class="mars-c" style="--c-xs:12;--c-md:12;--c-lg:12">
-                          <div class="dIjtdz mars-7_">
-                            <h1 class="kOzfyS mars-8_"><span class="hKEAti">The Mars Review&nbsp;</span></h1>
-                            <h1 class="kOzfyS mars-11_"><span class="hKEAti">of Books</span></h1>
-                            <p class="jgBUGG mars-14_ mars-gs-paragraph-1"><span class="hKEAti">A magazine in print and on Urbit</span></p>
-                            
-                            
-                             <h2 style="color:var(--mars-color-8);">
-                               "Takes on the establishment" — Politico
+<div class="container">
+<div class="mars-section">
+<link href="./assets/main.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="./assets/auxiliary.css">
+<style></style>
+<div style="opacity:0" class="hHzYuJ __mars __mars_6x_QSubD" id="__mars">
+<div class="cCHonK">
+<div class="bpQaoh">
+<div style="--overlay:rgba(0, 0, 0, 0.4)" class="kFoSDU mars-3_">
+<div>
+<div class="mars-r mars-r-eh" style="--s-xs:0px">
+<div class="mars-c" style="--c-xs:12;--c-md:12;--c-lg:12">
+<div class="dIjtdz mars-5_">
+<div class="mars-6_ mars-r mars-r-eh" style="--s-xs:15px;--s-md:0px;--s-lg:15px">
+<div class="mars-c" style="--c-xs:12;--c-md:12;--c-lg:12">
+<div class="dIjtdz mars-7_">
+<h1 class="kOzfyS mars-8_"><span class="hKEAti">The Mars Review&nbsp;</span></h1>
+<h1 class="kOzfyS mars-11_"><span class="hKEAti">of Books</span></h1>
+<p class="jgBUGG mars-14_ mars-gs-paragraph-1"><span class="hKEAti">A magazine in print and on Urbit</span></p>
+<h2 style="color:var(--mars-color-8);">
+"Takes on the establishment" — Politico
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                                 
-                <div class="sc-iJKOTD mars-27_ mars-r mars-r-eh" style="--s-xs:5px">
-                  <div class="mars-c sc-eGPXGI dIjtdz mars-28_" style="--c-xs:12
+
+<div class="sc-iJKOTD mars-27_ mars-r mars-r-eh" style="--s-xs:5px">
+<div class="mars-c sc-eGPXGI dIjtdz mars-28_" style="--c-xs:12
                   ;--c-sm:6;--c-md:3;--c-lg:3">
-                    <a data-link="inherit" class="expansive sc-fmciRz hKEAti"
-                       href="https://www.marsreview.org/issue2/" target="_self">
-                      <h3 class="sc-iAKWXU kOzfyS mars-29_">
-                        <p>Digital Edition</p>
-                      </h3>
-                    </a>
-                  </div>
-                  <div class="mars-c sc-eGPXGI dIjtdz mars-131_" style="--c-xs:12;--c-sm:6;--c-md:3;--c-lg:3">
-                    <a data-link="inherit" class="expansive sc-fmciRz hKEAti mars-129_"
-                      href="https://store.marsreview.org/" target="_self">
-                      <h3 class="sc-iAKWXU kOzfyS mars-130_">
-                        <p>Print Edition</p>
-                      </h3>
-                    </a>
-                  </div>
-                  <div class="mars-c sc-eGPXGI dIjtdz mars-36_" style="--c-xs:12;--c-sm:6;--c-md:3;--c-lg:3">
-                    <a data-link="inherit" class="expansive sc-fmciRz hKEAti"
-                      href="https://www.marsreview.org/vol1/issue1/" target="_self">
-                      <h3 class="sc-iAKWXU kOzfyS mars-37_">
-                        <p>Digital Archive</p>
-                      </h3>
-                    </a>
-                  </div>
-                  <div class="mars-c sc-eGPXGI dIjtdz mars-32_" style="--c-xs:12;--c-sm:6;--c-md:3;--c-lg:3">
-                    <a data-link="inherit" class="expansive sc-fmciRz hKEAti"
-                      href="./donate.html" target="_self">
-                      <h3 class="sc-iAKWXU kOzfyS mars-33_">
-                        <p>Donate</p>
-                      </h3>
-                    </a>
-                  </div>
-                </div>
-                
-                
-               
-             
-                <section style="padding-block:2rem; display:flex; flex-direction:column; align-items:center; font-family:var(--mars-primary-font); color:var(--mars-color-8);">
-                  <div style="padding-inline:1rem;">
-                    <h2 style="color:var(--mars-color-8);">
-                      NEW: Buy a <i>Mars Review</i> Subscription + Urbit Planet + Hosting Plan
-                    </h2>
-                    <p>$18 per month ($15 per month for planet hosting, $3 per month for print MRB subscription) includes:</p>
-                    <ul>
-                      <li>
-                        Permanent Urbit ID with simple and secure access to the
-                        network
-                      </li>
-                      <li>
-                        Custom <em>Mars Review of Books</em> desktop
-                      </li>
-                      <li>
-                        Subscription to the <em>Mars Review of Books</em> print
-                        edition at over 50% off cover price
-                      </li>
-                      <li>
-                        Access to Urbit-only <em>Mars Review</em> content and
-                        chat on the illustrious ~bidbel star
-                      </li>
-                    </ul>
-                  </div>
-                  <iframe src="https://planet.one/embed/mars-review?accentColor=%236D0718&bgColor=%23111213">
-                  </iframe>
-                </section>
-                <!--
-                <div class="sc-iJKOTD mars-118_ mars-r" style="--s-xs:15px">
-                </div>
-                test
-                -->
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<a data-link="inherit" class="expansive sc-fmciRz hKEAti" href="https://www.marsreview.org/vol1/issue3" target="_self">
+<h3 class="sc-iAKWXU kOzfyS mars-29_">
+ <p>Issue 3</p>
+</h3>
+</a>
+</div>
+<div class="mars-c sc-eGPXGI dIjtdz mars-131_" style="--c-xs:12;--c-sm:6;--c-md:3;--c-lg:3">
+<a data-link="inherit" class="expansive sc-fmciRz hKEAti mars-129_" href="https://store.marsreview.org/" target="_self">
+<h3 class="sc-iAKWXU kOzfyS mars-130_">
+<p>Print Edition</p>
+</h3>
+</a>
+</div>
+<div class="mars-c sc-eGPXGI dIjtdz mars-36_" style="--c-xs:12;--c-sm:6;--c-md:3;--c-lg:3">
+<a data-link="inherit" class="expansive sc-fmciRz hKEAti" href="./digital.html" target="_self">
+<h3 class="sc-iAKWXU kOzfyS mars-37_">
+<p>Previous Issues and Classifieds</p>
+</h3>
+</a>
+</div>
+<div class="mars-c sc-eGPXGI dIjtdz mars-32_" style="--c-xs:12;--c-sm:6;--c-md:3;--c-lg:3">
+<a data-link="inherit" class="expansive sc-fmciRz hKEAti" href="./donate.html" target="_self">
+<h3 class="sc-iAKWXU kOzfyS mars-33_">
+<p>Donate</p>
+</h3>
+</a>
+</div>
+</div>
+
+
+
+<section style="padding-block: 2rem; display: flex; flex-direction: column; align-items: center; font-family: var(--mars-primary-font); color: var(--mars-color-8);">
+  
+  <div style="padding-inline:1rem;">
+  <h2 style="color:var(--mars-color-8);">
+  NEW: Subscribe to the <i>Mars Review of Books</i> Digital Edition
+  </h2>
+  <p>Choose from our subscription tiers to get access to the digital edition and more</p>
+  <ul>
+  </ul>
+  </div>
+  
+  <br/>
+
+  <iframe id="iframe-element" src="https://paywall.tirrel.io/embed/~bidbel/MRB-Online-Paid" width="90%" height="500">
+  </iframe>
+
+  <div id="mobile-message">
+    <h2 style="color:var(--mars-color-8);">
+      <a href="https://www.marsreview.org/vol1/issue3/the-state-of-journalism-past-present-and-future-by-marc-hochstein-~fodrex-malmev" style="color:var(--mars-color-8);">
+        Click here to subscribe to the Mars Review of Books
+      </a>
+    </h2>
   </div>
 
-  <link rel="stylesheet" href="./assets/two.css" media="all">
+</section>
+
+
+<section style="padding-block:2rem; display:flex; flex-direction:column; align-items:center; font-family:var(--mars-primary-font); color:var(--mars-color-8);">
+<div style="padding-inline:1rem;">
+<h2 style="color:var(--mars-color-8);">
+Buy a <i>Mars Review</i> Subscription + Urbit Planet + Hosting Plan
+</h2>
+<p>$18 per month ($15 per month for planet hosting, $3 per month for print MRB subscription) includes:</p>
+<ul>
+<li>
+Permanent Urbit ID with simple and secure access to the
+network
+</li>
+<li>
+Custom <em>Mars Review of Books</em> desktop
+</li>
+<li>
+Subscription to the <em>Mars Review of Books</em> print
+edition at over 50% off cover price
+</li>
+<li>
+Access to Urbit-only <em>Mars Review</em> content and
+chat on the illustrious ~bidbel star
+</li>
+</ul>
+</div>
+</br>
+</br>
+</br>
+<iframe src="https://planet.one/embed/mars-review?accentColor=%236D0718&bgColor=%23111213">
+</iframe>
+</section>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="./assets/two.css" media="all">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114" integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw==" data-cf-beacon='{"rayId":"7b3a63a00c2afa9e","version":"2023.3.0","r":1,"b":1,"token":"e94a720e24ea46c9ae0abf120109a08b","si":100}' crossorigin="anonymous"></script>
 </body>
-
 </html>
-
