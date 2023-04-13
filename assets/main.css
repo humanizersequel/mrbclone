@@ -147,19 +147,3 @@
     height: 100%;
     width: 100%;
 }
-
-/*
-@media only screen and (max-width: 600px) {
-    #iframe-element {
-      display: none;
-    }
-    #mobile-message {
-      display: block;
-    }
-  }
-
-  @media only screen and (min-width: 601px) {
-    #mobile-message {
-      display: none;
-    }
-  }
